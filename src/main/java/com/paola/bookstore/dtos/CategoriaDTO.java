@@ -14,11 +14,11 @@ public class CategoriaDTO implements Serializable {
 	public CategoriaDTO() {
 		super();
 	}
-	public CategoriaDTO(Categoria categoriaDTO) {
+	public CategoriaDTO(Categoria categoria) {
 		super();
-		this.id = categoriaDTO.getId();
-		this.nome = categoriaDTO.getNome();
-		this.descricao = categoriaDTO.getDescricao();
+		this.id = categoria.getId();
+		this.nome = categoria.getNome();
+		this.descricao = categoria.getDescricao();
 	}
 	public Integer getId() {
 		return id;
