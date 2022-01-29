@@ -14,17 +14,22 @@ import com.paola.bookstore.repositories.CategoriaRepository;
 public class CategoriaService {
 	
 	@Autowired
-	private CategoriaRepository repository;
+	private CategoriaRepository repositoryCategoria;
 	
 	
 	public Categoria findById(Integer id) {
-		Optional<Categoria> obj = repository.findById(id);
-		return obj.orElseThrow(() -> new ObjectNotFoundException(obj.get(), "Objeto nao encontrado! id: " + id + ", Tipo: " + Categoria.class.getName()));
+		Optional<Categoria> obj = repositoryCategoria.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto nao encontrado! id: " + id + ", Tipo: " + Categoria.class.getName(), null));
 		
 	}
 	
 	public List<Categoria> findAll(){
-		return repository.findAll();
+		return repositoryCategoria.findAll();
 		 
+	}
+	
+	public Categoria create(Categoria categoria) {
+		categoria.setId(null);
+		return repositoryCategoria.save(categoria);
 	}
 }
