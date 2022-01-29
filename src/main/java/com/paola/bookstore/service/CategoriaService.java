@@ -41,5 +41,11 @@ public class CategoriaService {
 		return repositoryCategoria.save(categoria);
 		
 	}
-	
+
+	public void delete(Integer id) {
+		findById(id);
+		repositoryCategoria.deleteById(id);
+		
+	}
+
 }
