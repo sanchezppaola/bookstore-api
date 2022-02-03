@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.paola.bookstore.domain.Livro;
@@ -28,5 +29,18 @@ public class LivroService {
 	public List<Livro> findAll(Integer id_categoria){
 		categoriaService.findById(id_categoria);
 		return livroRepository.findAllByCategoria(id_categoria);
+	}
+	
+	public Livro update(Integer id, Livro livro) {
+		Livro newLivro = findById(id);
+		updateData(newLivro, livro);
+		return livroRepository.save(newLivro);
+		
+	}
+	private void updateData(Livro newLivro, Livro livro) {
+		newLivro.setTitulo(livro.getTitulo());
+		newLivro.setNome_autor(livro.getNome_autor());
+		newLivro.setTexto(livro.getTexto());
+		
 	}
 }
