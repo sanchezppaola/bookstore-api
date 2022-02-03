@@ -1,4 +1,4 @@
-package com.paola.bookstore.resources.exceptions;
+package com.south.votacao.resources.exceptions;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
