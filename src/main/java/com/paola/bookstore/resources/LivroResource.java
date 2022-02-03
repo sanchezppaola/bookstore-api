@@ -37,6 +37,7 @@ public class LivroResource {
 		List<Livro> list = livroService.findAll(id_categoria);
 		List<LivroDTO> listDTO = list.stream().map(livro -> new LivroDTO(livro)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);
+
 	}
 	
 	@PutMapping(value = "/{id}")
@@ -50,6 +51,7 @@ public class LivroResource {
 	public ResponseEntity<Livro> updatePatch(@PathVariable Integer id, @RequestBody Livro livro){
 		Livro newLivro = livroService.update(id, livro);
 		return ResponseEntity.ok().body(newLivro);
+
 		
 	}
 }

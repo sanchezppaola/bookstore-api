@@ -1,4 +1,4 @@
-package com.south.votacao.service.exceptions;
+package com.paola.bookstore.service.exceptions;
 
 public class DataIntegrityViolationException extends RuntimeException{
 

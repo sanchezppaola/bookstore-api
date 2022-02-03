@@ -1,11 +1,11 @@
-package com.south.votacao.config;
+package com.paola.bookstore.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.south.votacao.service.DBService;
+import com.paola.bookstore.service.DBService;
 
 @Configuration
 @Profile("test")
@@ -18,5 +18,7 @@ public class TestConfig {
 	public void instanciaBaseDeDados() {
 		dbService.instanciaBaseDeDados();
 		
-	}	
+	}
+	
+	
 }

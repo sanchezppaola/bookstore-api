@@ -1,4 +1,4 @@
-package com.south.votacao.resources.exceptions;
+package com.paola.bookstore.resources.exceptions;
 
 import javax.servlet.ServletRequest;
 
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.south.votacao.service.exceptions.DataIntegrityViolationException;
+import com.paola.bookstore.service.exceptions.DataIntegrityViolationException;
 
 
 @ControllerAdvice

@@ -1,4 +1,4 @@
-package com.south.votacao.resources.exceptions;
+package com.paola.bookstore.resources.exceptions;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class StandardError {
 		this.timestamp = timestamp;
 		this.status = status;
 		this.message = message;
-		this.errors = errors;
+		//this.errors = errors;
 	}
 
 

@@ -1,4 +1,4 @@
-package com.south.votacao.service.exceptions;
+package com.paola.bookstore.service.exceptions;
 
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 
