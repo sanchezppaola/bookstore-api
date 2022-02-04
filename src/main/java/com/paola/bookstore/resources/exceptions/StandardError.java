@@ -1,77 +1,48 @@
 package com.paola.bookstore.resources.exceptions;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class StandardError {
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy hh/MM/ss")
-	private LocalDateTime timestamp;
-	private String status;
-	private String message;
-
-	List<String> errors = new ArrayList<>();
-
+	private Long timestamp;
+	private Integer status;
+	private String error;
+	
 	public StandardError() {
 		super();
 	}
 
-	public StandardError(LocalDateTime timestamp, String status, String message, List<String> errors) {
+	public StandardError(Long timestamp, Integer status, String error) {
 		super();
 		this.timestamp = timestamp;
 		this.status = status;
-		this.message = message;
-		this.errors = errors;
+		this.error = error;
 	}
 
-	public StandardError(LocalDateTime timestamp, String status, String message) {
-		super();
-		this.timestamp = timestamp;
-		this.status = status;
-		this.message = message;
-		//this.errors = errors;
-	}
-
-
-	public StandardError(long currentTimeMillis, int value, String message2) {
-		this.message = message2;
-		this.status= String.valueOf(value);
-		this.timestamp =LocalDateTime.now();
-	}
-
-	public LocalDateTime getTimestamp() {
+	public Long getTimestamp() {
 		return timestamp;
 	}
 
-	public void setTimestamp(LocalDateTime timestamp) {
+	public void setTimestamp(Long timestamp) {
 		this.timestamp = timestamp;
 	}
 
-	public String getStatus() {
+	public Integer getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getError() {
+		return error;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setError(String error) {
+		this.error = error;
 	}
 
-	public List<String> getErrors() {
-		return errors;
-	}
-
-	public void setErrors(List<String> errors) {
-		this.errors = errors;
-	}
-
+	
 }
